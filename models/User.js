@@ -6,8 +6,8 @@ class User {
 
   addMindmaps(treeNode) {
     if (!treeNode)
-      return 'No mindmap added.'
-
+      return 'No mindmap added.';
+      
     this.userMindmaps.push(treeNode);
   }
 

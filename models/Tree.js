@@ -20,7 +20,7 @@ class Tree {
 
     removeChild(childNode) {
         if(!childNode)
-            return 'No node available to remove'
+            return 'No node available to remove';
         const index = this.children.indexOf(childNode);
 
         // when the search value is not found
@@ -39,7 +39,7 @@ class Tree {
         }
         //match found in root title 
         if (this.title == searchTitle) {
-            printTree(this)
+            printTree(this);
             return getNextLevelTopics(this);
         }
         // performs BFS to return a matching node with the title

@@ -16,7 +16,7 @@ const breadthFirstSearch = (root, targetVal) => {
         }
         // Enqueue all children of current node
         for (let child of node.children) {
-            q.enqueue(child)
+            q.enqueue(child);
         }
     }
     return null;

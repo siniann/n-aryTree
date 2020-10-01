@@ -1,12 +1,12 @@
-const Tree = require('./models/Tree')
-const User = require('./models/User')
+const Tree = require('./models/Tree');
+const User = require('./models/User');
 const {printTree} = require('./helpers/printTree');
 
 // create rootnode in mindmap data for testing
 let tree = new Tree(1,'Engineering');
-let tree1 = new Tree(2,'Hobbies')
-let tree2 = new Tree(3,'Movies')
-let tree3 = new Tree(4,'Dreams')
+let tree1 = new Tree(2,'Hobbies');
+let tree2 = new Tree(3,'Movies');
+let tree3 = new Tree(4,'Dreams');
 
 // create users
 let user1 = new User(100);
@@ -34,16 +34,16 @@ let java = programming.addChild(13,'Java');
 let python = programming.addChild(14,'Python');
 
 
-tree1.addChild(15,'Swimming')
-tree1.addChild(16,'Reading')
-tree1.addChild(17,'Sleeping')
+tree1.addChild(15,'Swimming');
+tree1.addChild(16,'Reading');
+tree1.addChild(17,'Sleeping');
 
 tree2.addChild(18,'Action');
 tree2.addChild(19,'Comedy');
 
-tree3.addChild(20,'Scary')
-tree3.addChild(21,'Funny')
-tree3.addChild(22,'Happy')
+tree3.addChild(20,'Scary');
+tree3.addChild(21,'Funny');
+tree3.addChild(22,'Happy');
 
 
 //print all mindmaps of a user
@@ -55,23 +55,11 @@ mindmapsByUser.forEach(item => {
     printTree(item);
 });
 
-
-/* 
-console.log(`Listing all mindmaps by user id:  ${user2.userId}`);
-
-let mindmapsByUser2 = user2.getAllUserMapsByUser();
-mindmapsByUser2.forEach(item => {
-    console.log(`---------------  Displaying Mindmap ${mindmapsByUser2.indexOf(item)+1} ---------------`);
-    printTree(item);
-});
- */
-
-
 let searchKey = 'Engineering';
 console.log(`--------------- Searching for topic: '${searchKey}' in '${tree.title}' Mindmap--------------- `);
 let results = tree.searchTopicsByTitle(searchKey);
 if (results.length == 0)
-    console.log('No Sub Topics Found')
+    console.log('No Sub Topics Found');
 else
-    console.log(results)
+    console.log(results);
 

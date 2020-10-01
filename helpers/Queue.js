@@ -10,10 +10,7 @@ class Queue {
   enqueue(item) {
     this.data.unshift(item);
   }
-  // removing element from the queue 
-  // returns underflow when called  
-  // on empty queue 
-
+  // remove oldest item from queue
   dequeue() {
     if (this.isEmpty()) {
       return "No elements in Queue";
@@ -23,8 +20,7 @@ class Queue {
 
   // front function 
   front() {
-    // returns the Front element of  
-    // the queue without removing it. 
+    // returns the Front element of the queue without removing it. 
     if (this.isEmpty())
       return "No elements in Queue";
     return this.data[0];
