@@ -61,5 +61,9 @@ let results = tree.searchTopicsByTitle(searchKey);
 if (results.length == 0)
     console.log('No Sub Topics Found');
 else
+{
+    console.log(`Topics under ${searchKey} : `)
     console.log(results);
+
+}
 
