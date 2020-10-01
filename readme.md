@@ -4,7 +4,7 @@ Every Tree is itself a subtree, so every node an instance of Tree.
 
 A user can have multiple mindmaps.
 
-Execute `npm run start ` to see the sample which creates users and their mindmaps.
+Execute `npm install` and  `npm run start ` to see the sample which creates users and their mindmaps.
  
  user1 has 3 different mindmaps(Engineering, Movies & Dreams)
 
