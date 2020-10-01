@@ -1,36 +1,40 @@
-const {breadthFirstSearch} = require("../helpers/breadthFirstSearch");
-const {getNextLevelTopics} = require("../helpers/getNextLevelTopics");
-const {printTree} = require("../helpers/printTree");
+const { breadthFirstSearch } = require("../helpers/breadthFirstSearch");
+const { getNextLevelTopics } = require("../helpers/getNextLevelTopics");
+const { printTree } = require("../helpers/printTree");
 
 // Tree constructor
 class Tree {
-    constructor(title) {
+    constructor(id, title) {
+        this.id = id;
         this.title = title;
         this.children = [];
     }
-    addChild(title) {
-        const node = new Tree(title);
+
+    addChild(id,title) {
+        if(!id || !title)
+            return null;
+        const node = new Tree(id,title);
         this.children.push(node);
         return node;
     }
 
     removeChild(childNode) {
+        if(!childNode)
+            return 'No node available to remove'
         const index = this.children.indexOf(childNode);
 
         // when the search value is not found
         if (index === -1) {
-            throw new Error("The provided node is not a child of this Tree");
+            return ("The provided node is not a child of this Tree");
         } else {
             // Modify the operating node's (this) children array by splicing out the childNode
             this.children.splice(index, 1);
         }
     }
 
-
-    
-     searchTopicsByTitle (searchTitle) {
+    searchTopicsByTitle(searchTitle) {
         //validate arguments
-        if ( !searchTitle ) {
+        if (!searchTitle) {
             return ('No search term available.');
         }
         //match found in root title 
@@ -49,7 +53,7 @@ class Tree {
             return ('No Topics found for the search');
         }
         return subTopics;
-     }
+    }
 
 }
 module.exports = Tree;

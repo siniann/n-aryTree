@@ -3,10 +3,10 @@ const User = require('./models/User')
 const {printTree} = require('./helpers/printTree');
 
 // create rootnode in mindmap data for testing
-let tree = new Tree('Engineering');
-let tree1 = new Tree('Hobbies')
-let tree2 = new Tree('Movies')
-let tree3 = new Tree('Dreams')
+let tree = new Tree(1,'Engineering');
+let tree1 = new Tree(2,'Hobbies')
+let tree2 = new Tree(3,'Movies')
+let tree3 = new Tree(4,'Dreams')
 
 // create users
 let user1 = new User(100);
@@ -19,31 +19,31 @@ user1.addMindmaps(tree3);
 user2.addMindmaps(tree1);
 
 // add topics/level2/ level3 to root
-let cs = tree.addChild('Computer Science');
-let me = tree.addChild('Mechanical')
-let civil = tree.addChild('Civil');
+let cs = tree.addChild(5,'Computer Science');
+let me = tree.addChild(6,'Mechanical')
+let civil = tree.addChild(7,'Civil');
 
-let programming = cs.addChild('Programming');
-let database = cs.addChild('Database');
-let devops = cs.addChild('Devops');
+let programming = cs.addChild(8,'Programming');
+let database = cs.addChild(9,'Database');
+let devops = cs.addChild(10,'Devops');
 
-let machine = me.addChild('Machines');
-let tools = me.addChild('Tools');
+let machine = me.addChild(11,'Machines');
+let tools = me.addChild(12,'Tools');
 
-let java = programming.addChild('Java');
-let python = programming.addChild('Python');
+let java = programming.addChild(13,'Java');
+let python = programming.addChild(14,'Python');
 
 
-tree1.addChild('Swimming')
-tree1.addChild('Reading')
-tree1.addChild('Sleeping')
+tree1.addChild(15,'Swimming')
+tree1.addChild(16,'Reading')
+tree1.addChild(17,'Sleeping')
 
-tree2.addChild('Action');
-tree2.addChild('Comedy');
+tree2.addChild(18,'Action');
+tree2.addChild(19,'Comedy');
 
-tree3.addChild('Scary')
-tree3.addChild('Funny')
-tree3.addChild('Happy')
+tree3.addChild(20,'Scary')
+tree3.addChild(21,'Funny')
+tree3.addChild(22,'Happy')
 
 
 //print all mindmaps of a user
